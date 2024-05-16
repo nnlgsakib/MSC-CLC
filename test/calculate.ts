@@ -5,7 +5,7 @@ const data = {
   tokenName: "MUSD"
 };
 
-axios.post('http://localhost:3000/api/calculate', data)
+axios.post('https://msc-clc.vercel.app/api/calculate', data)
   .then((response:any) => {
     console.log('TOTAL PRICE OF YOUR COIN IS :', response.data.total + "$");
   })
