@@ -19,7 +19,7 @@ app.post("/api/calculate", async (req, res) => {
         const result = await calc(value, tokenName);
 
         if (result === 0) {
-            return res.status(400).json({ error: "Calculation failed" });
+            return res.status(400).json({ error: "Calculation failed! Maybe coin is not supported " });
         }
 
         return res.json({ total: result });
